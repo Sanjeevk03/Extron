@@ -9,7 +9,7 @@ import os
 client = discord.Client(intents=discord.Intents.all())
 
 #open ai api key
-openai.api_key = "os.environ['API_KEY']"
+openai.api_key = "OPENAI_API_KEY"
 
 @client.event
 async def on_member_join(member):
@@ -154,4 +154,4 @@ def generate_response(prompt, temperature):
         return lines
 
 #discord bot token
-client.run(os.environ['Token'])
+client.run("BOT_SECRET_TOKEN_HERE")
